@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Irwansyah | Telecommunication & VSAT Engineer</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- LinkedIn Badge Script -->
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+
     <style>
         :root {
             --primary-color: #e74c3c;
@@ -51,56 +54,17 @@
         .skill-box h3 { color: var(--dark-color); margin-bottom: 10px; }
         .skill-box ul { padding-left: 20px; font-size: 14px; }
 
-        /* --- LinkedIn Realtime Integration Card --- */
-        #experience { background-color: var(--light-color); }
-        .linkedin-widget-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--white);
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            overflow: hidden;
-            border: 1px solid var(--border-color);
-        }
-        .linkedin-banner {
-            background: linear-gradient(135deg, var(--linkedin-blue), #004182);
-            padding: 30px;
-            color: white;
-            text-align: center;
-        }
-        .linkedin-banner i { font-size: 40px; margin-bottom: 10px; }
-        .linkedin-banner h3 { font-size: 22px; font-weight: 700; }
-        .linkedin-banner p { font-size: 14px; opacity: 0.9; margin-top: 5px; }
-        
-        .linkedin-body {
-            padding: 40px;
-            text-align: center;
-        }
-        .linkedin-body p {
-            font-size: 16px;
-            color: #555;
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
-        .btn-linkedin {
-            display: inline-flex;
+        /* LinkedIn Badge Section Wrapper */
+        #experience { background-color: var(--light-color); text-align: center; }
+        .linkedin-badge-wrapper {
+            display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 10px;
-            background-color: var(--linkedin-blue);
-            color: white;
-            padding: 14px 28px;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 30px;
-            transition: background 0.3s, transform 0.2s;
-            box-shadow: 0 4px 10px rgba(10, 102, 194, 0.3);
-        }
-        .btn-linkedin:hover {
-            background-color: #044181;
-            transform: translateY(-2px);
+            margin-top: 20px;
+            overflow-x: auto;
         }
 
-        /* --- PDF Portfolio Section --- */
+        /* PDF Portfolio Section */
         #portfolio { background-color: var(--dark-color); color: var(--white); }
         .pdf-container {
             width: 100%;
@@ -138,7 +102,6 @@
             nav ul { margin-top: 15px; flex-wrap: wrap; justify-content: center; }
             nav ul li { margin: 5px 10px; }
             .pdf-container iframe { height: 500px; }
-            .linkedin-body { padding: 25px; }
         }
     </style>
 </head>
@@ -150,7 +113,7 @@
         <ul>
             <li><a href="#home">Beranda</a></li>
             <li><a href="#about">Tentang</a></li>
-            <li><a href="#experience">Pengalaman LinkedIn</a></li>
+            <li><a href="#experience">Profil LinkedIn</a></li>
             <li><a href="#portfolio">Karya Unggulan</a></li>
             <li><a href="#contact">Kontak</a></li>
         </ul>
@@ -198,20 +161,15 @@
         </div>
     </section>
 
-    <!-- REALTIME LINKEDIN SECTION -->
+    <!-- LINKEDIN OFFICIAL BADGE SECTION -->
     <section id="experience">
-        <h2 class="section-title">Pengalaman Profesional LinkedIn</h2>
-        <div class="linkedin-widget-container">
-            <div class="linkedin-banner">
-                <i class="fab fa-linkedin"></i>
-                <h3>Terhubung Secara Real-Time</h3>
-                <p>Riwayat karier, sertifikasi, dan aktivitas terbaru saya diperbarui langsung di profil profesional.</p>
-            </div>
-            <div class="linkedin-body">
-                <p>Ingin melihat detail riwayat pekerjaan terbaru, rekomendasi rekan kerja, serta koneksi profesional saya di bidang telekomunikasi secara langsung dan *real-time*?</p>
-                <a href="https://linkedin.com/in/irwansyahhh" target="_blank" class="btn-linkedin">
-                    <i class="fab fa-linkedin-in"></i> Kunjungi Profil LinkedIn Saya
-                </a>
+        <h2 class="section-title">Profil Profesional LinkedIn</h2>
+        <p style="margin-bottom: 30px; color: #555;">Terhubung langsung dengan profil resmi saya secara real-time melalui lencana di bawah ini:</p>
+        
+        <div class="linkedin-badge-wrapper">
+            <!-- Kode Badge LinkedIn Anda -->
+            <div class="badge-base LI-profile-badge" data-locale="in_ID" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="irwansyahhh" data-version="v1">
+                <a class="badge-base__link LI-simple-link" href="https://id.linkedin.com/in/irwansyahhh?trk=profile-badge">IRWANSYAH .</a>
             </div>
         </div>
     </section>
@@ -220,7 +178,7 @@
     <section id="portfolio">
         <h2 class="section-title" style="color: var(--white);">Dokumen Karya Unggulan</h2>
         <div class="pdf-container">
-            <!-- Pastikan file "PORTOFOLIO_IRWANSYAH_2.pdf" ada di folder GitHub yang sama -->
+            <!-- Pastikan file "PORTOFOLIO_IRWANSYAH_2.pdf" ada di folder GitHub -->
             <iframe src="PORTOFOLIO_IRWANSYAH_2.pdf#toolbar=0" title="Portofolio Irwansyah">
                 Browser Anda tidak mendukung iframe PDF.
             </iframe>
