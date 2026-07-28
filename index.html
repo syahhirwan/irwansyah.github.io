@@ -51,66 +51,56 @@
         .skill-box h3 { color: var(--dark-color); margin-bottom: 10px; }
         .skill-box ul { padding-left: 20px; font-size: 14px; }
 
-        /* --- NEW: LinkedIn Style Experience Section --- */
+        /* --- LinkedIn Realtime Integration Card --- */
         #experience { background-color: var(--light-color); }
-        .experience-container {
-            background-color: var(--white);
-            border-radius: 8px;
-            box-shadow: 0 0 0 1px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.05);
-            padding: 30px;
-            max-width: 900px;
+        .linkedin-widget-container {
+            max-width: 800px;
             margin: 0 auto;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
         }
-        .experience-header {
-            display: flex;
-            align-items: center;
+        .linkedin-banner {
+            background: linear-gradient(135deg, var(--linkedin-blue), #004182);
+            padding: 30px;
+            color: white;
+            text-align: center;
+        }
+        .linkedin-banner i { font-size: 40px; margin-bottom: 10px; }
+        .linkedin-banner h3 { font-size: 22px; font-weight: 700; }
+        .linkedin-banner p { font-size: 14px; opacity: 0.9; margin-top: 5px; }
+        
+        .linkedin-body {
+            padding: 40px;
+            text-align: center;
+        }
+        .linkedin-body p {
+            font-size: 16px;
+            color: #555;
             margin-bottom: 25px;
+            line-height: 1.6;
         }
-        .experience-header h2 { font-size: 24px; color: rgba(0,0,0,0.9); }
-        .job-item {
-            display: flex;
-            margin-bottom: 30px;
-            position: relative;
-        }
-        .job-item:last-child { margin-bottom: 0; }
-        /* Timeline line */
-        .job-item:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            left: 24px;
-            top: 55px;
-            bottom: -15px;
-            width: 2px;
-            background-color: var(--border-color);
-        }
-        .company-logo {
-            width: 50px;
-            height: 50px;
-            background-color: #f3f2ef;
-            border-radius: 4px;
-            display: flex;
+        .btn-linkedin {
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            font-size: 24px;
-            color: var(--text-grey);
-            z-index: 2;
+            gap: 10px;
+            background-color: var(--linkedin-blue);
+            color: white;
+            padding: 14px 28px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 10px rgba(10, 102, 194, 0.3);
         }
-        .job-details { flex: 1; }
-        .job-title { font-size: 16px; font-weight: 600; color: rgba(0,0,0,0.9); margin-bottom: 2px; }
-        .company-name { font-size: 14px; color: rgba(0,0,0,0.9); font-weight: 400; margin-bottom: 2px; }
-        .job-duration { font-size: 14px; color: var(--text-grey); margin-bottom: 5px; }
-        .job-location { font-size: 14px; color: var(--text-grey); margin-bottom: 10px; }
-        .job-description {
-            font-size: 14px;
-            color: rgba(0,0,0,0.9);
-            line-height: 1.5;
-            list-style-type: disc;
-            padding-left: 20px;
+        .btn-linkedin:hover {
+            background-color: #044181;
+            transform: translateY(-2px);
         }
-        .job-description li { margin-bottom: 5px; }
 
-        /* --- NEW: Interactive PDF Portfolio Section --- */
+        /* --- PDF Portfolio Section --- */
         #portfolio { background-color: var(--dark-color); color: var(--white); }
         .pdf-container {
             width: 100%;
@@ -148,6 +138,7 @@
             nav ul { margin-top: 15px; flex-wrap: wrap; justify-content: center; }
             nav ul li { margin: 5px 10px; }
             .pdf-container iframe { height: 500px; }
+            .linkedin-body { padding: 25px; }
         }
     </style>
 </head>
@@ -159,7 +150,7 @@
         <ul>
             <li><a href="#home">Beranda</a></li>
             <li><a href="#about">Tentang</a></li>
-            <li><a href="#experience">Pengalaman</a></li>
+            <li><a href="#experience">Pengalaman LinkedIn</a></li>
             <li><a href="#portfolio">Karya Unggulan</a></li>
             <li><a href="#contact">Kontak</a></li>
         </ul>
@@ -207,66 +198,29 @@
         </div>
     </section>
 
-    <!-- NEW: LinkedIn Style Experience Section -->
+    <!-- REALTIME LINKEDIN SECTION -->
     <section id="experience">
-        <h2 class="section-title">Pengalaman Kerja</h2>
-        <div class="experience-container">
-            
-            <!-- Job 1: IBINET -->
-            <div class="job-item">
-                <div class="company-logo"><i class="fas fa-satellite"></i></div>
-                <div class="job-details">
-                    <div class="job-title">VSAT Engineer</div>
-                    <div class="company-name">IBINET Global Nusatindo · Full-time</div>
-                    <div class="job-duration">2026 - Present</div>
-                    <div class="job-location">Proyek BAKTI AKSI, Indonesia</div>
-                    <ul class="job-description">
-                        <li>Melaksanakan Preventive Maintenance (PM) dan Corrective Maintenance (CM) pada infrastruktur internet berbasis VSAT untuk fasilitas publik di daerah terpencil (sekolah, puskesmas, kantor desa).</li>
-                        <li>Melakukan pointing antena presisi, penyelarasan mekanis, dan kalibrasi silang polarisasi untuk mengoptimalkan penerimaan sinyal satelit.</li>
-                        <li>Mendiagnosis kesehatan server, mengukur stabilitas tegangan (AVO Test), dan mengganti perangkat keras yang rusak (misal: Transceiver Hughes HB220-L).</li>
-                        <li>Mengelola pelaporan kepatuhan SLA digital melalui sistem Kirei, termasuk pemetaan WiFi Analyzer dan verifikasi dasbor HT2010.</li>
-                    </ul>
-                </div>
+        <h2 class="section-title">Pengalaman Profesional LinkedIn</h2>
+        <div class="linkedin-widget-container">
+            <div class="linkedin-banner">
+                <i class="fab fa-linkedin"></i>
+                <h3>Terhubung Secara Real-Time</h3>
+                <p>Riwayat karier, sertifikasi, dan aktivitas terbaru saya diperbarui langsung di profil profesional.</p>
             </div>
-
-            <!-- Job 2: Telkom Intern -->
-            <div class="job-item">
-                <div class="company-logo"><i class="fas fa-network-wired"></i></div>
-                <div class="job-details">
-                    <div class="job-title">Test Engineer Intern</div>
-                    <div class="company-name">PT Telkom Indonesia (Persero) Tbk · Internship</div>
-                    <div class="job-duration">2026</div>
-                    <div class="job-location">Bandung, Jawa Barat</div>
-                    <ul class="job-description">
-                        <li>Melakukan pengujian dan kalibrasi perangkat telekomunikasi optik.</li>
-                        <li>Membantu analisis data jaringan untuk memastikan keandalan sistem akses.</li>
-                    </ul>
-                </div>
+            <div class="linkedin-body">
+                <p>Ingin melihat detail riwayat pekerjaan terbaru, rekomendasi rekan kerja, serta koneksi profesional saya di bidang telekomunikasi secara langsung dan *real-time*?</p>
+                <a href="https://linkedin.com/in/irwansyahhh" target="_blank" class="btn-linkedin">
+                    <i class="fab fa-linkedin-in"></i> Kunjungi Profil LinkedIn Saya
+                </a>
             </div>
-
-            <!-- Job 3: Salttek Intern -->
-            <div class="job-item">
-                <div class="company-logo"><i class="fas fa-tools"></i></div>
-                <div class="job-details">
-                    <div class="job-title">Access Network Technician Intern</div>
-                    <div class="company-name">PT Salttek Dumpang Jaya · Internship</div>
-                    <div class="job-duration">2026</div>
-                    <div class="job-location">Indonesia</div>
-                    <ul class="job-description">
-                        <li>Melaksanakan terminasi fiber optik (splicing) dan instalasi jaringan kabel luar (OSP).</li>
-                        <li>Memetakan rute jaringan menggunakan AutoCAD dan Google Earth.</li>
-                    </ul>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <!-- NEW: Interactive PDF Portfolio Section -->
+    <!-- Interactive PDF Portfolio Section -->
     <section id="portfolio">
         <h2 class="section-title" style="color: var(--white);">Dokumen Karya Unggulan</h2>
         <div class="pdf-container">
-            <!-- PENTING: Ganti "PORTOFOLIO_IRWANSYAH.pdf" dengan nama file PDF Anda yang sebenarnya saat diupload ke GitHub -->
+            <!-- Pastikan file "PORTOFOLIO_IRWANSYAH_2.pdf" ada di folder GitHub yang sama -->
             <iframe src="PORTOFOLIO_IRWANSYAH_2.pdf#toolbar=0" title="Portofolio Irwansyah">
                 Browser Anda tidak mendukung iframe PDF.
             </iframe>
