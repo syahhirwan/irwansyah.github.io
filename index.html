@@ -5,207 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Irwansyah | Telecommunication & VSAT Engineer</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary-color: #e74c3c;
             --dark-color: #2c3e50;
             --light-color: #f4f4f4;
             --white: #ffffff;
+            --linkedin-blue: #0a66c2;
+            --text-grey: #666666;
+            --border-color: #e0e0e0;
         }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            color: #333;
-            line-height: 1.6;
-            background-color: var(--light-color);
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; background-color: var(--light-color); }
 
         /* Navigation */
         nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(44, 62, 80, 0.95);
-            padding: 15px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
+            position: fixed; top: 0; width: 100%; background: rgba(44, 62, 80, 0.95);
+            padding: 15px 50px; display: flex; justify-content: space-between; align-items: center; z-index: 1000;
         }
-        nav .logo {
-            color: var(--white);
-            font-size: 20px;
-            font-weight: 800;
-            letter-spacing: 1px;
-        }
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        nav ul li {
-            margin-left: 20px;
-        }
-        nav ul li a {
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            transition: color 0.3s;
-        }
-        nav ul li a:hover {
-            color: var(--primary-color);
-        }
+        nav .logo { color: var(--white); font-size: 20px; font-weight: 800; letter-spacing: 1px; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { color: var(--white); text-decoration: none; font-weight: 600; font-size: 14px; transition: color 0.3s; }
+        nav ul li a:hover { color: var(--primary-color); }
 
         /* Sections */
-        section {
-            padding: 100px 10%;
-        }
-        .section-title {
-            font-size: 32px;
-            font-weight: 800;
-            color: var(--primary-color);
-            margin-bottom: 40px;
-            text-align: center;
-        }
+        section { padding: 100px 10%; }
+        .section-title { font-size: 32px; font-weight: 800; color: var(--primary-color); margin-bottom: 40px; text-align: center; }
 
         /* Hero Section */
-        #home {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            background-color: var(--dark-color);
-            color: var(--white);
-            padding: 0 10%;
-        }
-        .hero-content h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-        .hero-content h1 span {
-            color: var(--primary-color);
-        }
-        .hero-content p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin-bottom: 30px;
-            color: #bdc3c7;
-        }
-        .btn {
-            display: inline-block;
-            background: var(--primary-color);
-            color: var(--white);
-            padding: 12px 30px;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background: #c0392b;
-        }
+        #home { height: 100vh; display: flex; align-items: center; background-color: var(--dark-color); color: var(--white); padding: 0 10%; }
+        .hero-content h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
+        .hero-content h1 span { color: var(--primary-color); }
+        .hero-content p { font-size: 1.2rem; max-width: 600px; margin-bottom: 30px; color: #bdc3c7; }
+        .btn { display: inline-block; background: var(--primary-color); color: var(--white); padding: 12px 30px; text-decoration: none; font-weight: 600; border-radius: 5px; transition: background 0.3s; }
+        .btn:hover { background: #c0392b; }
 
         /* About & Skills */
-        #about {
-            background-color: var(--white);
-        }
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-        .skill-box {
-            background: var(--light-color);
-            padding: 20px;
-            border-left: 4px solid var(--primary-color);
-            margin-bottom: 20px;
-        }
-        .skill-box h3 {
-            color: var(--dark-color);
-            margin-bottom: 10px;
-        }
-        .skill-box ul {
-            padding-left: 20px;
-            font-size: 14px;
-        }
+        #about { background-color: var(--white); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .skill-box { background: var(--light-color); padding: 20px; border-left: 4px solid var(--primary-color); margin-bottom: 20px; }
+        .skill-box h3 { color: var(--dark-color); margin-bottom: 10px; }
+        .skill-box ul { padding-left: 20px; font-size: 14px; }
 
-        /* Projects */
-        #projects {
-            background-color: var(--light-color);
-        }
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .card {
-            background: var(--white);
-            padding: 30px;
+        /* --- NEW: LinkedIn Style Experience Section --- */
+        #experience { background-color: var(--light-color); }
+        .experience-container {
+            background-color: var(--white);
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.05);
+            padding: 30px;
+            max-width: 900px;
+            margin: 0 auto;
         }
-        .card:hover {
-            transform: translateY(-5px);
+        .experience-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
         }
-        .card h3 {
-            color: var(--dark-color);
-            margin-bottom: 15px;
-            font-size: 20px;
+        .experience-header h2 { font-size: 24px; color: rgba(0,0,0,0.9); }
+        .job-item {
+            display: flex;
+            margin-bottom: 30px;
+            position: relative;
         }
-        .card p {
+        .job-item:last-child { margin-bottom: 0; }
+        /* Timeline line */
+        .job-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 55px;
+            bottom: -15px;
+            width: 2px;
+            background-color: var(--border-color);
+        }
+        .company-logo {
+            width: 50px;
+            height: 50px;
+            background-color: #f3f2ef;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 24px;
+            color: var(--text-grey);
+            z-index: 2;
+        }
+        .job-details { flex: 1; }
+        .job-title { font-size: 16px; font-weight: 600; color: rgba(0,0,0,0.9); margin-bottom: 2px; }
+        .company-name { font-size: 14px; color: rgba(0,0,0,0.9); font-weight: 400; margin-bottom: 2px; }
+        .job-duration { font-size: 14px; color: var(--text-grey); margin-bottom: 5px; }
+        .job-location { font-size: 14px; color: var(--text-grey); margin-bottom: 10px; }
+        .job-description {
             font-size: 14px;
-            color: #555;
-            margin-bottom: 15px;
+            color: rgba(0,0,0,0.9);
+            line-height: 1.5;
+            list-style-type: disc;
+            padding-left: 20px;
         }
-        .card .tech-stack {
-            font-size: 12px;
-            color: var(--primary-color);
-            font-weight: 600;
+        .job-description li { margin-bottom: 5px; }
+
+        /* --- NEW: Interactive PDF Portfolio Section --- */
+        #portfolio { background-color: var(--dark-color); color: var(--white); }
+        .pdf-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
+        .pdf-container iframe {
+            width: 100%;
+            height: 800px;
+            border: none;
+            border-radius: 4px;
+        }
+        .portfolio-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #bdc3c7;
+        }
+        .portfolio-note a { color: var(--primary-color); text-decoration: none; font-weight: bold; }
 
         /* Contact */
-        #contact {
-            background-color: var(--dark-color);
-            color: var(--white);
-            text-align: center;
-        }
-        .contact-info {
-            font-size: 18px;
-            margin: 20px 0;
-        }
-        .contact-info a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-        }
+        #contact { background-color: var(--white); text-align: center; }
+        .contact-info { font-size: 18px; margin: 20px 0; }
+        .contact-info a { color: var(--linkedin-blue); text-decoration: none; font-weight: 600; }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-            nav {
-                flex-direction: column;
-                padding: 15px;
-            }
-            nav ul {
-                margin-top: 15px;
-            }
-            nav ul li {
-                margin: 0 10px;
-            }
+            .about-grid { grid-template-columns: 1fr; }
+            .hero-content h1 { font-size: 2.5rem; }
+            nav { flex-direction: column; padding: 15px; }
+            nav ul { margin-top: 15px; flex-wrap: wrap; justify-content: center; }
+            nav ul li { margin: 5px 10px; }
+            .pdf-container iframe { height: 500px; }
         }
     </style>
 </head>
@@ -216,8 +158,9 @@
         <div class="logo">IRWANSYAH.</div>
         <ul>
             <li><a href="#home">Beranda</a></li>
-            <li><a href="#about">Tentang & Keahlian</a></li>
-            <li><a href="#projects">Karya Unggulan</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#experience">Pengalaman</a></li>
+            <li><a href="#portfolio">Karya Unggulan</a></li>
             <li><a href="#contact">Kontak</a></li>
         </ul>
     </nav>
@@ -226,8 +169,8 @@
     <header id="home">
         <div class="hero-content">
             <h1>Telecommunication Engineer<br><span>& VSAT Specialist</span></h1>
-            <p>Membangun infrastruktur yang kokoh melalui perencanaan yang akurat, pemeliharaan yang disiplin, dan integrasi teknologi digital.</p>
-            <a href="#projects" class="btn">Lihat Portofolio</a>
+            <p>Membangun infrastruktur satelit yang kokoh, pemeliharaan yang disiplin, dan integrasi teknologi digital cerdas.</p>
+            <a href="#portfolio" class="btn">Lihat Portofolio Lengkap</a>
         </div>
     </header>
 
@@ -237,26 +180,26 @@
         <div class="about-grid">
             <div>
                 <p style="margin-bottom: 15px; text-align: justify;">
-                    Lulusan S1 Teknik Telekomunikasi dari Telkom University dengan kompetensi mendalam di bidang infrastruktur jaringan dan teknologi digital. Memiliki sertifikasi profesional <strong>MikroTik Certified Network Associate (MTCNA)</strong> dan saat ini bekerja sebagai VSAT Engineer di IBINET Global Nusatindo, mengelola proyek satelit remote BAKTI AKSI.
+                    Lulusan S1 Teknik Telekomunikasi dari Telkom University dengan kompetensi mendalam di bidang infrastruktur jaringan dan teknologi digital. Memiliki sertifikasi profesional <strong>MikroTik Certified Network Associate (MTCNA)</strong> dan saat ini aktif mengelola infrastruktur satelit remote untuk proyek BAKTI AKSI.
                 </p>
                 <p style="text-align: justify;">
-                    Berpengalaman teknis nyata di lapangan, mulai dari terminasi Fiber Optik, pemetaan OSP, hingga perancangan model Deep Learning (CNN) untuk biometrik. Saya menggabungkan ketangguhan operasional lapangan dengan kecerdasan sistem analitik.
+                    Berpengalaman teknis nyata di lapangan, mulai dari terminasi Fiber Optik, pemetaan OSP, hingga perancangan model Deep Learning (CNN) untuk biometrik. Saya menggabungkan ketangguhan operasional lapangan dengan kecerdasan sistem analitik data.
                 </p>
             </div>
             <div>
                 <div class="skill-box">
-                    <h3>🛠️ Infrastruktur & Jaringan</h3>
+                    <h3><i class="fas fa-satellite-dish"></i> Infrastruktur & Jaringan</h3>
                     <ul>
                         <li>VSAT Preventive & Corrective Maintenance (Hughes)</li>
-                        <li>Routing & Switching (RouterOS, Cisco IOS)</li>
-                        <li>Fiber Optic Splicing, OTDR, OPM</li>
+                        <li>Routing & Switching Protocols (RouterOS, Cisco IOS)</li>
+                        <li>Fiber Optic Splicing, OTDR, OPM Testing</li>
                     </ul>
                 </div>
                 <div class="skill-box">
-                    <h3>💻 Perangkat Lunak & AI</h3>
+                    <h3><i class="fas fa-code"></i> Perangkat Lunak & AI</h3>
                     <ul>
-                        <li>Network Simulation (Packet Tracer, Atoll, GNS3)</li>
-                        <li>Python, Google Colab, Pandas</li>
+                        <li>Network Simulation (Atoll, GNS3, Packet Tracer)</li>
+                        <li>Python, Google Colab, Pandas API Integration</li>
                         <li>Deep Learning (CNN / MobileNetV2), OpenCV</li>
                     </ul>
                 </div>
@@ -264,46 +207,83 @@
         </div>
     </section>
 
-    <!-- Karya Unggulan (Projects) -->
-    <section id="projects">
-        <h2 class="section-title">Karya Unggulan</h2>
-        <div class="project-grid">
+    <!-- NEW: LinkedIn Style Experience Section -->
+    <section id="experience">
+        <h2 class="section-title">Pengalaman Kerja</h2>
+        <div class="experience-container">
             
-            <div class="card">
-                <h3>Remote VSAT Deployment & SLA Compliance</h3>
-                <p>Melakukan preventive & corrective maintenance (penggantian Transceiver HB220-L, re-kalibrasi antena, weatherproofing) untuk proyek satelit BAKTI AKSI guna memenuhi SLA nasional.</p>
-                <div class="tech-stack">Hughes HT2010 | Kirei Web Portal | WiFi Analyzer</div>
+            <!-- Job 1: IBINET -->
+            <div class="job-item">
+                <div class="company-logo"><i class="fas fa-satellite"></i></div>
+                <div class="job-details">
+                    <div class="job-title">VSAT Engineer</div>
+                    <div class="company-name">IBINET Global Nusatindo · Full-time</div>
+                    <div class="job-duration">2026 - Present</div>
+                    <div class="job-location">Proyek BAKTI AKSI, Indonesia</div>
+                    <ul class="job-description">
+                        <li>Melaksanakan Preventive Maintenance (PM) dan Corrective Maintenance (CM) pada infrastruktur internet berbasis VSAT untuk fasilitas publik di daerah terpencil (sekolah, puskesmas, kantor desa).</li>
+                        <li>Melakukan pointing antena presisi, penyelarasan mekanis, dan kalibrasi silang polarisasi untuk mengoptimalkan penerimaan sinyal satelit.</li>
+                        <li>Mendiagnosis kesehatan server, mengukur stabilitas tegangan (AVO Test), dan mengganti perangkat keras yang rusak (misal: Transceiver Hughes HB220-L).</li>
+                        <li>Mengelola pelaporan kepatuhan SLA digital melalui sistem Kirei, termasuk pemetaan WiFi Analyzer dan verifikasi dasbor HT2010.</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="card">
-                <h3>Perancangan Cell Coverage 4G LTE</h3>
-                <p>Merancang cakupan sinyal yang optimal (RSRP > -100 dBm & SINR > 15 dB) untuk wilayah padat Kuta, Bali, dengan menentukan lokasi site dan konfigurasi parameter antena.</p>
-                <div class="tech-stack">Atoll RF Planning | Map Integration</div>
+            <!-- Job 2: Telkom Intern -->
+            <div class="job-item">
+                <div class="company-logo"><i class="fas fa-network-wired"></i></div>
+                <div class="job-details">
+                    <div class="job-title">Test Engineer Intern</div>
+                    <div class="company-name">PT Telkom Indonesia (Persero) Tbk · Internship</div>
+                    <div class="job-duration">2026</div>
+                    <div class="job-location">Bandung, Jawa Barat</div>
+                    <ul class="job-description">
+                        <li>Melakukan pengujian dan kalibrasi perangkat telekomunikasi optik.</li>
+                        <li>Membantu analisis data jaringan untuk memastikan keandalan sistem akses.</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="card">
-                <h3>Deteksi Biometrik: Sidik Bibir via CNN</h3>
-                <p>Melatih model AI untuk mengidentifikasi individu menggunakan dataset terbatas (200 citra). Mengaplikasikan preprocessing tangguh hingga mencapai tingkat akurasi tinggi.</p>
-                <div class="tech-stack">Python | MobileNetV2 | OpenCV | Dlib</div>
-            </div>
-
-            <div class="card">
-                <h3>Dashboard Analisis Crypto</h3>
-                <p>Aplikasi web interaktif terintegrasi API yang memantau harga real-time 100+ aset digital dan menerapkan peramalan statistik ARIMA untuk memprediksi harga.</p>
-                <div class="tech-stack">Python | Pandas | API Integration | ARIMA</div>
+            <!-- Job 3: Salttek Intern -->
+            <div class="job-item">
+                <div class="company-logo"><i class="fas fa-tools"></i></div>
+                <div class="job-details">
+                    <div class="job-title">Access Network Technician Intern</div>
+                    <div class="company-name">PT Salttek Dumpang Jaya · Internship</div>
+                    <div class="job-duration">2026</div>
+                    <div class="job-location">Indonesia</div>
+                    <ul class="job-description">
+                        <li>Melaksanakan terminasi fiber optik (splicing) dan instalasi jaringan kabel luar (OSP).</li>
+                        <li>Memetakan rute jaringan menggunakan AutoCAD dan Google Earth.</li>
+                    </ul>
+                </div>
             </div>
 
         </div>
     </section>
 
+    <!-- NEW: Interactive PDF Portfolio Section -->
+    <section id="portfolio">
+        <h2 class="section-title" style="color: var(--white);">Dokumen Karya Unggulan</h2>
+        <div class="pdf-container">
+            <!-- PENTING: Ganti "PORTOFOLIO_IRWANSYAH.pdf" dengan nama file PDF Anda yang sebenarnya saat diupload ke GitHub -->
+            <iframe src="PORTOFOLIO_IRWANSYAH_2.pdf#toolbar=0" title="Portofolio Irwansyah">
+                Browser Anda tidak mendukung iframe PDF.
+            </iframe>
+        </div>
+        <div class="portfolio-note">
+            Tidak bisa melihat dokumen? <a href="PORTOFOLIO_IRWANSYAH_2.pdf" target="_blank">Unduh PDF Portofolio di sini</a>.
+        </div>
+    </section>
+
     <!-- Kontak -->
     <section id="contact">
-        <h2 class="section-title" style="color: var(--white);">Mari Bekerja Sama</h2>
-        <p>Saya terbuka untuk proyek, pekerjaan kontrak, dan peran penuh waktu yang memungkinkan saya memberi dampak.</p>
+        <h2 class="section-title">Mari Bekerja Sama</h2>
+        <p>Terbuka untuk diskusi teknis, kolaborasi proyek, dan peluang profesional baru.</p>
         <div class="contact-info">
-            <p>Email: <a href="mailto:syahi251508@gmail.com">syahi251508@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/irwansyahhh" target="_blank">linkedin.com/in/irwansyahhh</a></p>
-            <p style="margin-top: 15px; font-size: 14px; color: #bdc3c7;">📍 Medan, Sumatera Utara | Siap untuk penempatan remote atau onsite</p>
+            <p><i class="fas fa-envelope" style="color:var(--primary-color);"></i> <a href="mailto:syahi251508@gmail.com" style="color:var(--dark-color);">syahi251508@gmail.com</a></p>
+            <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/irwansyahhh" target="_blank">linkedin.com/in/irwansyahhh</a></p>
+            <p style="margin-top: 15px; font-size: 14px; color: var(--text-grey);"><i class="fas fa-map-marker-alt"></i> Medan, Sumatera Utara | Bersedia untuk Remote & On-site</p>
         </div>
     </section>
 
